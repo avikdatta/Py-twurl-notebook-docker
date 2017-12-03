@@ -17,7 +17,7 @@ RUN apt-get -y update &&   \
     &&  apt-get clean \
     &&  rm -rf /var/lib/apt/lists/*
     
+RUN gem install twurl
+
 USER $NB_USER
 WORKDIR /home/$NB_USER
-
-RUN gem install twurl
